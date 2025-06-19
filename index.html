@@ -4,59 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RE_CODE</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="logo">RE_CODE</h1>
-            <nav class="nav">
-                <a href="#bookmarklets" class="nav-link">Bookmarklets</a>
-                <a href="#links" class="nav-link">Links</a>
-                <a href="#tutorials" class="nav-link">Tutoriais</a>
+        <header>
+            <h1>RE_CODE</h1>
+            <nav>
+                <a href="#bookmarklets">Bookmarklets</a>
+                <a href="#scripts">Scripts</a>
+                <a href="#tutoriais">Tutoriais</a>
             </nav>
         </header>
 
-        <!-- Hero -->
-        <section class="hero">
-            <h2>Ferramentas para devs</h2>
-            <p>Crie, execute e compartilhe</p>
-        </section>
-
-        <!-- Tutoriais -->
-        <section id="tutorials" class="section">
-            <h3 class="section-title">Tutoriais</h3>
-            <div class="filter-buttons">
-                <button class="filter-btn active">Todos</button>
-                <button class="filter-btn">JavaScript</button>
-                <button class="filter-btn">CSS</button>
-            </div>
-            <div class="card-grid">
-                <div class="card">
-                    <h4>JavaScript Moderno</h4>
-                    <p>Domine ES6+ em 30 minutos</p>
-                    <span class="tag">JavaScript</span>
-                </div>
-                <div class="card">
-                    <h4>CSS Grid</h4>
-                    <p>Layouts complexos facilmente</p>
-                    <span class="tag">CSS</span>
-                </div>
+        <section id="bookmarklets">
+            <h2>Bookmarklets</h2>
+            <div class="item">
+                <h3>Dark Mode</h3>
+                <p>Ativa tema escuro em qualquer site:</p>
+                <code>javascript:(function(){document.body.style.filter='invert(1)'})()</code>
+                <button onclick="copyCode(this)">Copiar</button>
             </div>
         </section>
 
-        <!-- Bookmarklets -->
-        <section id="bookmarklets" class="section">
-            <h3 class="section-title">Bookmarklets</h3>
-            <div class="card-grid">
-                <div class="card">
-                    <h4>Dark Mode</h4>
-                    <p>Ativa tema escuro em qualquer site</p>
-                    <button class="copy-btn">Copiar</button>
-                </div>
+        <section id="scripts">
+            <h2>Scripts Úteis</h2>
+            <div class="item">
+                <h3>Formatador de Código</h3>
+                <a href="assets/js/script.js" download>Download</a>
+            </div>
+        </section>
+
+        <section id="tutoriais">
+            <h2>Tutoriais</h2>
+            <div class="item">
+                <h3>JavaScript Moderno</h3>
+                <a href="https://youtube.com/..." target="_blank">Assistir</a>
             </div>
         </section>
     </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
