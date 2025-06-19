@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RE_CODE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">RE_CODE</h1>
-        <nav class="menu">
-            <a href="#home">Início</a>
-            <a href="#features">Funcionalidades</a>
-            <a href="#contact">nada aq</a>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Header Minimalista -->
+        <header class="header">
+            <h1 class="logo">RE<span>_</span>CODE</h1>
+            <nav class="nav">
+                <a href="#bookmarklets" class="nav-link">Bookmarklets</a>
+                <a href="#links" class="nav-link">Links</a>
+                <a href="#tutoriais" class="nav-link">Tutoriais</a>
+            </nav>
+        </header>
 
-    <main>
-        <section id="home" class="section hero">
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="hero-content">
-                <h2>Transforme ideias em código</h2>
-                <p> Complicado kakakakak</p>.</p>
+                <p class="subtitle">Ferramentas para devs</p>
+                <h2 class="title">Crie, execute e compartilhe</h2>
+                <div class="divider"></div>
             </div>
         </section>
 
-        <section id="features" class="section feature hidden">
-            <h2>Funcionalidades</h2>
-            <div class="feature-grid">
-                <div class="feature-card hidden">
-                    <h3>Editor Inteligente</h3>
-                    <p>Autocompletar código em tempo real.</p>
-                </div>
-                <div class="feature-card hidden">
-                    <h3>Integração com Git</h3>
-                    <p>Commit e push direto do editor.</p>
+        <!-- Seção Bookmarklets -->
+        <section id="bookmarklets" class="section">
+            <h3 class="section-title">Bookmarklets</h3>
+            <div class="card-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">⚡</div>
+                    <h4>Dark Mode</h4>
+                    <p>Ativa tema escuro em qualquer site</p>
+                    <button class="copy-btn" data-code="javascript:(function(){/*código*/})()">Copiar</button>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
-    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
 </body>
-                  </html>
+</html>
