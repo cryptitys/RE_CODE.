@@ -6,47 +6,48 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #0d0d0d, #1a1a2e);
-  color: #fff;
+  background: linear-gradient(180deg, #0a0a0a, #121633);
+  color: #ffffff;
   padding: 20px;
   min-height: 100vh;
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2em;
-  color: #00ffe1;
-  background: linear-gradient(90deg, #00ffe1, #2c7dfd, #a06afe);
+  font-size: 2.2em;
+  background: linear-gradient(to right, #00ffe1, #2c7dfd, #a06afe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 header p {
-  color: #ccc;
+  color: #b0b3c7;
   font-size: 0.95em;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
-main section {
+section {
   margin-bottom: 30px;
 }
 
 h2 {
-  color: #90caff;
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
+  color: #76b3fa;
+  font-size: 1.4em;
   margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
 }
 
 ul {
   list-style: none;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 ul li {
@@ -54,7 +55,7 @@ ul li {
 }
 
 a {
-  color: #00ffe1;
+  color: #7ed6df;
   text-decoration: none;
 }
 
@@ -64,29 +65,28 @@ a:hover {
 
 code {
   display: block;
-  background: #222;
-  color: #0ff;
-  padding: 8px;
-  border-radius: 6px;
-  margin: 5px 0 15px;
+  background: #1b1f3a;
+  color: #00ffe1;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
   font-size: 0.9em;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .btn-area {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .btn {
   background: linear-gradient(to right, #00ffe1, #0077ff);
-  color: #000;
-  padding: 10px 20px;
+  color: black;
+  padding: 12px 24px;
   border-radius: 25px;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s ease;
-  display: inline-block;
 }
 
 .btn:hover {
@@ -96,7 +96,12 @@ code {
 
 footer {
   text-align: center;
-  font-size: 0.8em;
-  color: #777;
-  margin-top: 40px;
-  }
+  font-size: 0.85em;
+  color: #999;
+  margin-top: 60px;
+  line-height: 1.5;
+}
+
+footer a {
+  color: #c488f5;
+}
