@@ -13,7 +13,6 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .tab-button {
       background: #1b1f3a;
       color: #7ed6df;
@@ -24,16 +23,13 @@
       font-weight: bold;
       transition: all 0.3s ease;
     }
-
     .tab-button.active {
       background: linear-gradient(90deg, #00ffe1, #2c7dfd);
       color: #000;
     }
-
     .tab-content {
       display: none;
     }
-
     .tab-content.active {
       display: block;
     }
@@ -46,64 +42,71 @@
   </header>
 
   <main>
-    <!-- Botões das Abas -->
+    <!-- Abas -->
     <div class="tabs">
       <button class="tab-button active" onclick="showTab('serie1')">📘 1ª Série</button>
       <button class="tab-button" onclick="showTab('serie2')">📘 2ª Série</button>
       <button class="tab-button" onclick="showTab('serie3')">📘 3ª Série</button>
     </div>
 
-    <!-- Conteúdo da 1ª Série -->
+    <!-- 1ª Série -->
     <section id="serie1" class="tab-content active">
       <h2>📘 Apostilas 1ª Série</h2>
+
       <h3>📗 Volume 1</h3>
       <ul>
-        <li>História e Geografia – <a href="pdfs/1serie/vol1/histgeo.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/1serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
-        <li>Física, Biologia e Química – <a href="pdfs/1serie/vol1/ciencias.pdf" download>Acessar PDF</a></li>
+        <li>História e Geografia – <a href="https://acervocmsp.educacao.sp.gov.br/128887/1071738.pdf" download>Acessar PDF</a></li>
+        <li>Língua Portuguesa e Matemática – <a href="https://acervocmsp.educacao.sp.gov.br/128886/1071762.pdf" download>Acessar PDF</a></li>
+        <li>Física, Biologia e Química – <a href="https://acervocmsp.educacao.sp.gov.br/128889/1071740.pdf" download>Acessar PDF</a></li>
       </ul>
+
       <h3>📙 Volume 2</h3>
       <ul>
-        <li>História e Geografia – <a href="pdfs/1serie/vol2/histgeo.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/1serie/vol2/portmat.pdf" download>Acessar PDF</a></li>
-        <li>Biologia, Física e Química – <a href="pdfs/1serie/vol2/ciencias.pdf" download>Acessar PDF</a></li>
+        <li>História e Geografia – <a href="https://acervocmsp.educacao.sp.gov.br/134895/1162069.pdf" download>Acessar PDF</a></li>
+        <li>Língua Portuguesa e Matemática – <a href="https://acervocmsp.educacao.sp.gov.br/135098/1166561.pdf" download>Acessar PDF</a></li>
+        <li>Biologia, Física e Química – <a href="https://acervocmsp.educacao.sp.gov.br/128897/1071774.pdf" download>Acessar PDF</a></li>
       </ul>
     </section>
 
-    <!-- Conteúdo da 2ª Série -->
+    <!-- 2ª Série -->
     <section id="serie2" class="tab-content">
       <h2>📘 Apostilas 2ª Série</h2>
+
       <h3>📗 Volume 1</h3>
       <ul>
-        <li>História e Geografia – <a href="pdfs/2serie/vol1/histgeo.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/2serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
-        <li>Física, Biologia e Química – <a href="pdfs/2serie/vol1/ciencias.pdf" download>Acessar PDF</a></li>
+        <li>História e Geografia – <span style="color: gray;">PDF não disponível</span></li>
+        <li>Língua Portuguesa e Matemática – <span style="color: gray;">PDF não disponível</span></li>
+        <li>Física, Biologia e Química – <span style="color: gray;">PDF não disponível</span></li>
       </ul>
+
       <h3>📙 Volume 2</h3>
       <ul>
-        <li>História e Geografia – <a href="pdfs/2serie/vol2/histgeo.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/2serie/vol2/portmat.pdf" download>Acessar PDF</a></li>
-        <li>Biologia, Física e Química – <a href="pdfs/2serie/vol2/ciencias.pdf" download>Acessar PDF</a></li>
+        <li>História e Geografia – <a href="https://acervocmsp.educacao.sp.gov.br/134904/1162100.pdf" download>Acessar PDF</a></li>
+        <li>Língua Portuguesa e Matemática – <a href="https://acervocmsp.educacao.sp.gov.br/135103/1166601.pdf" download>Acessar PDF</a></li>
+        <li>Biologia, Física e Química – <a href="https://acervocmsp.educacao.sp.gov.br/134908/1162109.pdf" download>Acessar PDF</a></li>
       </ul>
     </section>
 
-    <!-- Conteúdo da 3ª Série -->
+    <!-- 3ª Série -->
     <section id="serie3" class="tab-content">
       <h2>📘 Apostilas 3ª Série</h2>
+
       <h3>📗 Volume 1</h3>
       <ul>
-        <li>História e Física – <a href="pdfs/3serie/vol1/histfis.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/3serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
+        <li>História e Física – <span style="color: gray;">PDF não disponível</span></li>
+        <li>Língua Portuguesa e Matemática – <span style="color: gray;">PDF não disponível</span></li>
       </ul>
+
       <h3>📙 Volume 2</h3>
       <ul>
-        <li>História e Física – <a href="pdfs/3serie/vol2/histfis.pdf" download>Acessar PDF</a></li>
-        <li>Língua Portuguesa e Matemática – <a href="pdfs/3serie/vol2/portmat.pdf" download>Acessar PDF</a></li>
+        <li>História e Física – <a href="https://acervocmsp.educacao.sp.gov.br/134904/1162100.pdf" download>Acessar PDF</a></li>
+        <li>Língua Portuguesa e Matemática – <a href="https://acervocmsp.educacao.sp.gov.br/135106/1166617.pdf" download>Acessar PDF</a></li>
       </ul>
+
       <h3>📚 São Paulo em Ação</h3>
       <ul>
-        <li>Língua Portuguesa – <a href="pdfs/3serie/spa/portugues.pdf" download>Acessar PDF</a></li>
-        <li>Matemática – <a href="pdfs/3serie/spa/matematica.pdf" download>Acessar PDF</a></li>
+        <li>Língua Portuguesa – <a href="https://drive.google.com/uc?id=1RtgzVjJl8oxVWU1vwjyNL1AEaQIYWFVw&export=download">Acessar PDF</a></li>
+        <li>Matemática – <a href="https://drive.google.com/uc?id=1s7jtG8Ta0PqvYGBxxmbN-csRqXshfvpy&export=download">Acessar PDF</a></li>
       </ul>
     </section>
 
@@ -129,4 +132,4 @@
     }
   </script>
 </body>
-      </html>
+                                                                                                                                          </html>
