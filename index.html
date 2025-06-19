@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RE_CODE | Ferramentas Dev</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- Background de Partículas -->
     <div id="particles-js"></div>
+    
+    <header class="glass-header">
+        <div class="logo">
+            <span class="logo-code">{</span>RE_CODE<span class="logo-code">}</span>
+        </div>
+        <nav>
+            <a href="#bookmarklets" class="nav-btn">Bookmarklets</a>
+            <a href="/tutorials" class="nav-btn active">Tutoriais</a>
+            <button id="theme-toggle">🌓</button>
+        </nav>
+    </header>
 
-    <!-- Container Principal -->
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <img src="assets/img/logo.svg" alt="RE_CODE" width="120">
-            </div>
-            <nav class="nav">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="tutorials.html" class="nav-link">Tutoriais</a>
-                <a href="#bookmarklets" class="nav-link">Bookmarklets</a>
-            </nav>
-        </header>
-
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="title">Domine as <span>Ferramentas Dev</span></h1>
-                <p class="subtitle">Tutoriais curtos e bookmarklets poderosos</p>
-                <a href="tutorials.html" class="cta-button pulse">Explorar Tutoriais</a>
+    <main class="container">
+        <section class="hero">
+            <h1>Recursos <span class="highlight">para Devs</span></h1>
+            <p class="subtitle">Bookmarklets poderosos e tutoriais direto ao ponto</p>
+            
+            <div class="cta-grid">
+                <a href="#bookmarklets" class="cta-card">
+                    <div class="cta-icon">⚡</div>
+                    <h3>Bookmarklets</h3>
+                    <p>Ferramentas de um clique</p>
+                </a>
+                
+                <a href="/tutorials/javascript.html" class="cta-card">
+                    <div class="cta-icon">🎥</div>
+                    <h3>Tutoriais</h3>
+                    <p>YouTube selecionados</p>
+                </a>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- Scripts -->
     <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
-</html>
+    </html>
