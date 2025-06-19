@@ -4,73 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RE_CODE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header Minimalista -->
+        <!-- Header -->
         <header class="header">
-            <h1 class="logo">RE<span>_</span>CODE</h1>
+            <h1 class="logo">RE_CODE</h1>
             <nav class="nav">
                 <a href="#bookmarklets" class="nav-link">Bookmarklets</a>
                 <a href="#links" class="nav-link">Links</a>
-                <a href="#tutoriais" class="nav-link">Tutoriais</a>
+                <a href="#tutorials" class="nav-link">Tutoriais</a>
             </nav>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero">
-            <div class="hero-content">
-                <p class="subtitle">Ferramentas para devs</p>
-                <h2 class="title">Crie, execute e compartilhe</h2>
-                <div class="divider"></div>
+            <h2>Ferramentas para devs</h2>
+            <p>Crie, execute e compartilhe</p>
+        </section>
+
+        <!-- Tutoriais -->
+        <section id="tutorials" class="section">
+            <h3 class="section-title">Tutoriais</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">JavaScript</button>
+                <button class="filter-btn">CSS</button>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>JavaScript Moderno</h4>
+                    <p>Domine ES6+ em 30 minutos</p>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card">
+                    <h4>CSS Grid</h4>
+                    <p>Layouts complexos facilmente</p>
+                    <span class="tag">CSS</span>
+                </div>
             </div>
         </section>
-        
-<!-- Seção Tutoriais -->
-<section id="tutoriais" class="section">
-    <h3 class="section-title">Tutoriais</h3>
-    <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="javascript">JavaScript</button>
-        <button class="filter-btn" data-filter="css">CSS</button>
-    </div>
-    <div class="video-grid">
-        <!-- Tutorial 1 -->
-        <div class="video-card" data-category="javascript">
-            <div class="video-thumbnail">
-                <img src="imagens/thumb-js.jpg" alt="JavaScript">
-                <div class="play-icon">▶</div>
-            </div>
-            <h4>JavaScript Moderno</h4>
-            <p>Domine ES6+ em 30 minutos</p>
-        </div>
-        <!-- Tutorial 2 -->
-        <div class="video-card" data-category="css">
-            <div class="video-thumbnail">
-                <img src="imagens/thumb-css.jpg" alt="CSS">
-                <div class="play-icon">▶</div>
-            </div>
-            <h4>CSS Grid</h4>
-            <p>Layouts complexos facilmente</p>
-        </div>
-    </div>
-    </section>
-        <!-- Seção Bookmarklets -->
+
+        <!-- Bookmarklets -->
         <section id="bookmarklets" class="section">
             <h3 class="section-title">Bookmarklets</h3>
             <div class="card-grid">
-                <div class="tool-card">
-                    <div class="tool-icon">⚡</div>
+                <div class="card">
                     <h4>Dark Mode</h4>
                     <p>Ativa tema escuro em qualquer site</p>
-                    <button class="copy-btn" data-code="javascript:(function(){/*código*/})()">Copiar</button>
+                    <button class="copy-btn">Copiar</button>
                 </div>
             </div>
         </section>
     </div>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
