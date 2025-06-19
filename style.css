@@ -206,3 +206,75 @@ footer a:hover {
     font-size: 1rem;
   }
   }
+.rodape {
+  width: 100%;
+  background: linear-gradient(90deg, #0b0f20, #1a1f38);
+  border-top: 2px solid #2c7dfd;
+  box-shadow: 0 -2px 15px rgba(0, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.rodape-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #a0a3b7;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.emoji {
+  display: inline-block;
+  animation: girarEmoji 4s linear infinite;
+  margin-right: 4px;
+}
+
+@keyframes girarEmoji {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.autor {
+  background: linear-gradient(90deg, #c488f5, #7ed6df, #c488f5);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradienteTexto 5s ease infinite;
+  font-weight: bold;
+}
+
+@keyframes gradienteTexto {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+.discord-label {
+  color: #7ed6df;
+}
+
+.discord-link {
+  color: #76b3fa;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.discord-link:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #888aac;
+  margin-top: 4px;
+}
+
+/* Espaço para o rodapé fixo */
+body {
+  padding-bottom: 130px;
+  }
