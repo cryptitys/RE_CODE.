@@ -1,128 +1,205 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body e fundo estrelado */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: radial-gradient(circle at top center, #0b0e1a 0%, #0a0a0a 100%);
-  color: #ffffff;
+  color: #e0e0e0;
   padding: 20px;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
 
-/* Fundo estrelado */
+/* Fundo estrelado com opacidade e leve animação */
 body::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background-image: url('https://raw.githubusercontent.com/cupiditys/redacao/main/assets/stars.svg');
   background-repeat: repeat;
   background-size: contain;
   opacity: 0.07;
   pointer-events: none;
   z-index: 0;
+  animation: twinkle 30s linear infinite;
 }
 
-/* Garante que conteúdo fique acima do fundo */
+@keyframes twinkle {
+  0%, 100% {opacity: 0.07;}
+  50% {opacity: 0.12;}
+}
+
+/* Garante que o conteúdo fique acima do fundo */
 main, header, footer {
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Header */
 header {
   text-align: center;
   margin-bottom: 40px;
+  user-select: none;
 }
 
 header h1 {
-  font-size: 2.2em;
-  background: linear-gradient(to right, #00ffe1, #2c7dfd, #a06afe);
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #00ffe1, #2c7dfd, #a06afe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 header p {
-  color: #b0b3c7;
-  font-size: 0.95em;
+  color: #a0a3b7;
+  font-size: 1rem;
   margin-top: 8px;
+  font-weight: 500;
 }
 
+/* Seções */
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  background: #14182e99; /* semi transparente */
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgb(0 120 255 / 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 0 25px rgb(0 160 255 / 0.5);
 }
 
 h2 {
   color: #76b3fa;
-  font-size: 1.4em;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 5px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2c7dfd;
+  padding-bottom: 8px;
+  font-weight: 700;
 }
 
+/* Listas */
 ul {
   list-style: none;
   padding-left: 0;
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
+/* Links */
 a {
   color: #7ed6df;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
 }
 
 a:hover {
+  color: #00e5ff;
   text-decoration: underline;
 }
 
+/* Código */
 code {
   display: block;
   background: #1b1f3a;
   color: #00ffe1;
-  padding: 10px;
-  border-radius: 8px;
-  margin: 10px 0;
-  font-size: 0.9em;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
   word-wrap: break-word;
+  box-shadow: inset 0 0 10px #00ffe1aa;
+  user-select: all;
 }
 
+/* Botões */
 .btn-area {
   text-align: center;
   margin-top: 30px;
 }
 
 .btn {
-  background: linear-gradient(to right, #00ffe1, #0077ff);
-  color: black;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: bold;
+  background: linear-gradient(90deg, #00ffe1, #0077ff);
+  color: #000;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
   text-decoration: none;
-  transition: 0.3s ease;
+  box-shadow: 0 6px 15px rgb(0 120 255 / 0.4);
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #00e0ff, #005eff);
+  transform: scale(1.07);
+  box-shadow: 0 8px 22px rgb(0 140 255 / 0.7);
+  background: linear-gradient(90deg, #00ccda, #0058c4);
+  color: #fff;
+  cursor: pointer;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  font-size: 0.85em;
-  color: #999;
-  margin-top: 60px;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #888aac;
+  margin-top: 80px;
+  line-height: 1.6;
+  user-select: none;
+  font-weight: 500;
+  max-width: 900px;
 }
 
 footer a {
   color: #c488f5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 520px) {
+  section {
+    padding: 20px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  code {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
   }
