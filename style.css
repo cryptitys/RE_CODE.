@@ -101,7 +101,10 @@ ul li {
   font-size: 1.1rem;
   line-height: 1.4;
 }
-
+/* Espaço extra no final para o rodapé fixo não tampar o conteúdo */
+body {
+  padding-bottom: 130px;
+                           }
 /* Links */
 a {
   color: #7ed6df;
