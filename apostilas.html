@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>📄 Apostilas por Série</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tab-button {
+      background: #1b1f3a;
+      color: #7ed6df;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 2px solid #2c7dfd;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .tab-button.active {
+      background: linear-gradient(90deg, #00ffe1, #2c7dfd);
+      color: #000;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>📄 Apostilas por Série</h1>
-    <p>Organizadas por ano, volume e matéria</p>
+    <p>Escolha a série abaixo para visualizar os PDFs</p>
   </header>
 
   <main>
-    <!-- 1ª SÉRIE -->
-    <section>
-      <h2>📘 Apostilas 1ª Série</h2>
+    <!-- Botões das Abas -->
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('serie1')">📘 1ª Série</button>
+      <button class="tab-button" onclick="showTab('serie2')">📘 2ª Série</button>
+      <button class="tab-button" onclick="showTab('serie3')">📘 3ª Série</button>
+    </div>
 
+    <!-- Conteúdo da 1ª Série -->
+    <section id="serie1" class="tab-content active">
+      <h2>📘 Apostilas 1ª Série</h2>
       <h3>📗 Volume 1</h3>
       <ul>
         <li>História e Geografia – <a href="pdfs/1serie/vol1/histgeo.pdf" download>Acessar PDF</a></li>
         <li>Língua Portuguesa e Matemática – <a href="pdfs/1serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
         <li>Física, Biologia e Química – <a href="pdfs/1serie/vol1/ciencias.pdf" download>Acessar PDF</a></li>
       </ul>
-
       <h3>📙 Volume 2</h3>
       <ul>
         <li>História e Geografia – <a href="pdfs/1serie/vol2/histgeo.pdf" download>Acessar PDF</a></li>
@@ -32,17 +70,15 @@
       </ul>
     </section>
 
-    <!-- 2ª SÉRIE -->
-    <section>
+    <!-- Conteúdo da 2ª Série -->
+    <section id="serie2" class="tab-content">
       <h2>📘 Apostilas 2ª Série</h2>
-
       <h3>📗 Volume 1</h3>
       <ul>
         <li>História e Geografia – <a href="pdfs/2serie/vol1/histgeo.pdf" download>Acessar PDF</a></li>
         <li>Língua Portuguesa e Matemática – <a href="pdfs/2serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
         <li>Física, Biologia e Química – <a href="pdfs/2serie/vol1/ciencias.pdf" download>Acessar PDF</a></li>
       </ul>
-
       <h3>📙 Volume 2</h3>
       <ul>
         <li>História e Geografia – <a href="pdfs/2serie/vol2/histgeo.pdf" download>Acessar PDF</a></li>
@@ -51,22 +87,19 @@
       </ul>
     </section>
 
-    <!-- 3ª SÉRIE -->
-    <section>
+    <!-- Conteúdo da 3ª Série -->
+    <section id="serie3" class="tab-content">
       <h2>📘 Apostilas 3ª Série</h2>
-
       <h3>📗 Volume 1</h3>
       <ul>
         <li>História e Física – <a href="pdfs/3serie/vol1/histfis.pdf" download>Acessar PDF</a></li>
         <li>Língua Portuguesa e Matemática – <a href="pdfs/3serie/vol1/portmat.pdf" download>Acessar PDF</a></li>
       </ul>
-
       <h3>📙 Volume 2</h3>
       <ul>
         <li>História e Física – <a href="pdfs/3serie/vol2/histfis.pdf" download>Acessar PDF</a></li>
         <li>Língua Portuguesa e Matemática – <a href="pdfs/3serie/vol2/portmat.pdf" download>Acessar PDF</a></li>
       </ul>
-
       <h3>📚 São Paulo em Ação</h3>
       <ul>
         <li>Língua Portuguesa – <a href="pdfs/3serie/spa/portugues.pdf" download>Acessar PDF</a></li>
@@ -82,5 +115,18 @@
   <footer>
     <p>🪄vitor</p>
   </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
-</html>
+      </html>
