@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📚 Meu Hub de Estudo</title>
+  <title>📚 TROLLCHIPS</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="logo-trollchips.png" type="image/x-icon" />
 </head>
 <body>
   <header>
-    <h1>    🪄Trollchips</h1>
+    <h1 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="logo-trollchips.png" alt="Logo Trollchips" style="height: 32px;" />
+      TROLLCHIPS
+    </h1>
     <p>Central de Bookmarks, Links e Tutoriais ✨</p>
   </header>
 
@@ -19,15 +22,14 @@
       <p><strong>Khan Academy:</strong><br />
         <code>javascript:fetch("https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/Khanware.js").then(t=>t.text()).then(eval);</code>
       </p>
-     <p><strong>SPEAK:</strong><br />
+      <p><strong>SPEAK:</strong><br />
         <code>javascript:fetch("https://speakify.cupiditys.lol/api/bookmark.js").then(r => r.text()).then(r => eval(r))</code>
-     </p>
+      </p>
       <p><strong>Speak pc:</strong><br />
         <a href="https://speakify.cupiditys.lol/" target="_blank" rel="noopener noreferrer">Abrir Speakify</a>
       </p>
-
       <p><em>😁 Copie os Bookmarklets acima e cole na barra de favoritos do navegador.
-                para copiar, clique duas vezes em cima</em></p>
+              Para copiar, clique duas vezes em cima.</em></p>
     </section>
 
     <section>
@@ -41,38 +43,26 @@
 
     <div class="btn-area">
       <a href="tutoriais.html" class="btn">🎥 Acessar Tutoriais</a>
+      <a href="apostilas.html" class="btn">📚 Apostilas por Série</a>
     </div>
   </main>
-<div class="btn-area">
-  <a href="apostilas.html" class="btn">📄 Apostilas por Série</a>
-</div>
-  <footer style="
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  background: linear-gradient(90deg, #0b0f20, #1a1f38);
-  border-top: 2px solid #2c7dfd;
-  text-align: center;
-  color: #a0a3b7;
-  font-size: 0.95rem;
-  font-weight: 500;
-  z-index: 999;
-  box-shadow: 0 -2px 15px rgba(0, 255, 255, 0.08);
-  backdrop-filter: blur(5px);
-">
-  <div>
-    <footer class="rodape">
-  <div class="rodape-content">
-    <p><span class="emoji">🪄</span> Desenvolvido por <strong class="autor">vitor e Lucas</strong> — 2025</p>
-    <p>
-      <span class="discord-label">🔗 Discord:</span>
-      <a class="discord-link" href="https://discord.gg/platformdestroyer"
-         target="_blank" rel="noopener noreferrer">
-        discord.gg/platformdestroyer
-      </a>
-    </p>
-    <p class="copy">© 2025</p>
-  </div>
-                                                       </footer>
+
+  <footer>
+    <div style="text-align: center; padding: 20px 10px; font-size: 0.9rem; color: #aaa;">
+      <p>
+        🪄 Desenvolvido por <strong style="color:#c488f5;">vitor e Lucas</strong> — 2025
+      </p>
+      <p style="margin-top: 6px;">
+        <span style="color:#7ed6df;">🔗 Discord:</span>
+        <a href="https://discord.gg/platformdestroyer"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#76b3fa; font-weight:600; text-decoration:none;">
+          discord.gg/platformdestroyer
+        </a>
+      </p>
+      <p style="color:#666; font-size: 0.8rem; margin-top: 4px;">© 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
