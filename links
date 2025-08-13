@@ -1,0 +1,782 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila Destroyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://imgs.search.brave.com/ewBOsudyEhHzqASvoT9Jm5CNNjpIeQGYYMTOGIdXGJk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdm/cmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9ib29rLTQ5LTIy/N3gzMDAucG5n" type="imagex/png">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body data-theme="dark">
+    <div id="mainApp" class="main-app active">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="#" class="logo">
+                        <i class="fas fa-book"></i>
+                        <span>Apostila Destroyer</span>
+                    </a>
+                </div>
+                
+                <div class="nav-right">
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fas fa-book"></i>
+                    <span>Menu</span>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-section-title">Principal</h3>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-item active">
+                            <a href="#home" class="sidebar-link" data-page="home">
+                                <i class="fas fa-home"></i>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#apostilas" class="sidebar-link" data-page="apostilas">
+                                <i class="fas fa-book-open"></i>
+                                <span>Apostilas</span>
+                                <span class="sidebar-badge">46</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#creditos" class="sidebar-link" data-page="creditos">
+                                <i class="fas fa-heart"></i>
+                                <span>Créditos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="mainContent" class="main-content">
+            <!-- Home Page -->
+            <div id="homePage" class="page active">
+                <section class="hero">
+                    <div class="hero-background">
+                        <div class="hero-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="hero-content">
+                            <a href="https://discord.gg/nAdEXj5Zqu">
+                                <div class="hero-badge">
+                                    <i class="fab fa-discord"></i>
+                                    <span>Platform Destroyer</span>
+                                </div>
+                            </a>
+                            <h1 class="hero-title">
+                                As melhores Apostilas<br>
+                                para o seu aprendizado
+                            </h1>
+                            <p class="hero-subtitle">
+                                Acesse conteúdo de qualidade, organize seus estudos e acompanhe seu progresso de forma inteligente.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="#apostilas" class="btn btn-primary btn-large" data-page="apostilas">
+                                    <span>Explorar Apostilas</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="#demonstracao" class="btn btn-secondary btn-large" data-page="demonstracao">
+                                    <i class="fas fa-play"></i>
+                                    <span>Ver Demonstração</span>
+                                </a>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="46">0</span>
+                                    <span class="stat-label">Apostilas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="22300">0</span>
+                                    <span class="stat-label">Satisfeitos!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Por que escolher a Apostila Destroyer?</h2>
+                            <p class="section-subtitle">
+                                Um lugar completo com oque você precisa.
+                            </p>
+                        </div>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <h3 class="feature-title">Uso Fácil</h3>
+                                <p class="feature-description">
+                                    Veja todas as apostilas encontradas pela Platform Destroyer!
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3 class="feature-title">Responsivo</h3>
+                                <p class="feature-description">
+                                    Site completamente compatível com celular e computador!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="apostilasPage" class="page">
+                <section class="apostilas-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Apostilas por Série</h2>
+                            <p class="section-subtitle">Conteúdo organizado por ano escolar</p>
+                        </div>
+
+                        <div class="grade-tabs">
+                            <button class="tab-btn active" data-tab="ensino-fundamental">Ensino Fundamental</button>
+                            <button class="tab-btn" data-tab="ensino-medio">Ensino Médio</button>
+                        </div>
+
+                        <div id="ensino-fundamental" class="tab-content active">
+                            <div class="grade-cards">
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>6º Ano</h3>
+                                        <span class="grade-count">7 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128857/1071504.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Ciências, história e geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128878/1071714.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128874/1071692.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Geografia e Ciências - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135153/1167415.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Português - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138026/1262512.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Ciências, História, Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/137970/1261821.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>7º Ano</h3>
+                                        <span class="grade-count">7 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128859/1071663.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128879/1071719.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128875/1071698.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134825/1161386.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138028/1262518.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Ciências, História, Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/137972/1261834.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>8º Ano</h3>
+                                        <span class="grade-count">7 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128871/1071664.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128880/1071722.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128876/1071703.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134884/1161968.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135158/1167452.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138030/1262528.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Ciências, História, Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/137974/1261839.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>9º Ano</h3>
+                                        <span class="grade-count">7 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128872/1071670.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128881/1071729.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                    <span>Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128877/1071712.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134887/1161988.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História, Ciências e Geografia - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135159/1167461.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138032/1262543.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Ciências, História, Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/137976/1261848.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ensino-medio" class="tab-content">
+                            <div class="grade-cards">
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>1º Ano</h3>
+                                        <span class="grade-count">13 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128887/1071738.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128886/1071762.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128889/1071740.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Biologia, Física e Química - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126590/1139566.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126661/1112056.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de Portugues - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134895/1162069.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia: - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135098/1166561.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134900/1162084.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Biologia, Física e Química - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126590/1139566.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126662/1137565.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de Português - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138034/1262556.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Física, Biologia, Química - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138011/1262482.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138036/1262569.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>2º Ano</h3>
+                                        <span class="grade-count">12 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128896/1071753.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128894/1071768.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128897/1071774.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Física, Biologia e Química - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126591/1121077.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126663/1128464.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de Portugues - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134904/1162100.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135103/1166601.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134908/1162109.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Biologia, Física e Química - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126592/1137594.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/126698/1145130.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>O.E de português - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138040/1262595.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Física, Biologia, Química - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138013/1262487.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138038/1262582.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Geografia - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grade-card">
+                                    <div class="grade-header">
+                                        <div class="grade-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <h3>3º Ano</h3>
+                                        <span class="grade-count">6 apostilas</span>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 1</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128899/1071760.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Física - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/128900/1071776.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 1</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 2</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/134911/1162126.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Física - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/135106/1166617.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Língua Portuguesa e Matemática - Volume 2</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="volume-section">
+                                        <h4 class="volume-title">Volume 3</h4>
+                                        <div class="books-list">
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138042/1262617.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>História e Física - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://acervocmsp.educacao.sp.gov.br/138016/1262492.pdf" target="_blank" class="book-item">
+                                                <i class="fas fa-file-pdf"></i>
+                                                <span>Matemática e Língua Portuguesa - Volume 3</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="stats-section">
+                    <div class="container">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="58">0</span>
+                                    <span class="stat-label">Apostilas Disponíveis</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="22300">0</span>
+                                    <span class="stat-label">Pessoas Satisfeitas!</span>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="98">0</span>
+                                    <span class="stat-label">Porcentagem de Satisfação</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="creditosPage" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h1>Créditos</h1>
+                        <p>Contribuidores do projeto Apostila Destroyer :D</p>
+                    </div>
+                    <div class="empty-state">
+                        <i class="fas fa-heart"></i>
+                        <h3>Contribuidores:</h3>
+                        <p>Criador original: Who Asked</p>
+                        <p>Frontend: Who Asked & Tecniccomsono</p>
+                        <p>Animações: Tecniccomsono</p>
+                        <p>Apostilas: Who Asked</p>
+                        <p>agradecimentos nao especiais e sim odiais: thiago o criador (nos de pesames)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="demonstracaoPage" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h1>Demonstração</h1>
+                        <p>Demonstração do projeto Apostila Destroyer :D</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="src/demo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="matematicaPage" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h1>Matemática</h1>
+                        <p>Apostilas de Matemática para todos os níveis</p>
+                    </div>
+                    <div class="empty-state">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Apostilas de Matemática</h3>
+                        <p>Em breve, conteúdo específico de matemática!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fisicaPage" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h1>Física</h1>
+                        <p>Apostilas de Física para todos os níveis</p>
+                    </div>
+                    <div class="empty-state">
+                        <i class="fas fa-atom"></i>
+                        <h3>Apostilas de Física</h3>
+                        <p>Em breve, conteúdo específico de física!</p>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Overlay for mobile sidebar -->
+        <div id="overlay" class="overlay"></div>
+    </div>
+
+    <script src="src/script/script.js"></script>
+</body>
+</html>
