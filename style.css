@@ -1,40 +1,122 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body e fundo estrelado */
+/* Fundo estrelado */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top center, #0b0e1a 0%, #0a0a0a 100%);
-  color: #e0e0e0;
-  padding: 20px;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Fundo estrelado com opacidade e leve animação */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url('https://raw.githubusercontent.com/cupiditys/redacao/main/assets/stars.svg');
-  background-repeat: repeat;
-  background-size: contain;
-  opacity: 0.07;
-  pointer-events: none;
-  z-index: 0;
-  animation: twinkle 30s linear infinite;
+.stars {
+    background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-@keyframes twinkle {
-  0%, 100% {opacity: 0.07;}
-  50% {opacity: 0.12;}
+/* Header */
+header {
+    padding: 2rem 1rem;
 }
+
+header .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+header h1 {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: left;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-top: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s ease;
+}
+
+.footer-icon:hover img {
+    transform: rotate(360deg);
+}}
 
 /* Garante que o conteúdo fique acima do fundo */
 main, header, footer {
