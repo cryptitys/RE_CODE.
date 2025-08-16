@@ -828,7 +828,7 @@
     <div class="category-box">
         <h2 class="category-title"><i class="fas fa-code"></i> Scripts</h2>
         <div class="buttons-container">
-            <button class="button" data-aos="fade-up" data-aos-delay="100"  oneclick="href="apostilas.html"('apostilas')"><i class="fas fa-skull"></i> apostila.html</button>
+            <button class="button" data-aos="fade-up" data-aos-delay="100" href="apostilas.html"><i class="fas fa-skull"></i> apostilas</button>
             <button class="button" data-aos="fade-up" data-aos-delay="200" onclick="copyScript('Redação Paulista')"><i class="fas fa-pen-to-square"></i> Redação Paulista</button>
             <button class="button" data-aos="fade-up" data-aos-delay="300" onclick="copyScript('Expansão Noturno')"><i class="fas fa-moon"></i> Expansão Noturno</button>
             <button class="button" data-aos="fade-up" data-aos-delay="400" onclick="copyScript('Khan Academy')"><i class="fas fa-graduation-cap"></i> Khan Academy</button>
@@ -889,106 +889,14 @@
             }
         }
 
-        function showNotification() {
-            const notification = document.getElementById("donation-notification");
-            notification.classList.add("show");
-
-            setTimeout(() => {
-                notification.classList.add("hide");
-                notification.classList.remove("show");
-
-                setTimeout(() => {
-                    notification.classList.remove("hide");
-                    notification.style.right = "-350px";
-                }, 500);
-            }, 15000);
-        }
+        
+        
 
         
 
-        function dismissNotification() {
-            const notification = document.getElementById("donation-notification");
-            notification.classList.add("hide");
-            notification.classList.remove("show");
-            setTimeout(() => {
-                notification.classList.remove("hide");
-                notification.style.right = "-350px";
-            }, 500);
-        }
+            
 
-        function copyScript(platform) {
-            let scriptToClone = "";
-
-            switch (platform) {
-                case 'Khan Academy':
-                    scriptToClone = "javascript:fetch(\"https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/Khanware.js").then(t=>t.text()).then(eval);";
-                    break;
-                case 'Alura':
-                    scriptToClone = "// ==UserScript==\n// @name         Alura-Infinity\n// @namespace    https://cursos.alura.com.br/\n// @match        https://cursos.alura.com.br/course/*/task/*\n// @icon         https://i.imgur.com/OtfkTcS.png\n// @grant        none\n// @require      https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js\n// ==/UserScript==";
-                    break;
-                case 'Redação Paulista':
-                    scriptToClone = "javascript:fetch(\"https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/RedaSP-IA.js\").then(t=>t.text()).then(eval);";
-                    break;
-                case 'Expansão Noturno':
-                    scriptToClone = "javascript:fetch(\"https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/ExNoturnoFDS.js\").then(t=>t.text()).then(eval);";
-                    break;
-                
-                default:
-                    scriptToClone = "javascript:fetch(\"https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/WebTeste.js\").then(t=>t.text()).then(eval);";
-            }
-
-            const tempElement = document.createElement("textarea");
-            tempElement.value = scriptToClone;
-            document.body.appendChild(tempElement);
-            tempElement.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempElement);
-
-            const donationNotification = document.getElementById("donation-notification");
-            if (donationNotification.classList.contains("show")) {
-                dismissNotification();
-                setTimeout(() => {
-                    showCopyNotification(platform);
-                }, 300);
-            } else {
-                showCopyNotification(platform);
-            }
-        }
-
-        function showCopyNotification(platform) {
-            const notification = document.getElementById("copy-notification");
-            const message = notification.querySelector(".notification-message");
-            message.textContent = `Script para ${platform} copiado com sucesso! Adicione nos favoritos do navegador para executar.`;
-
-            notification.style.right = "-350px";
-            notification.style.opacity = "0";
-            notification.classList.remove("hide");
-
-            void notification.offsetWidth;
-
-            setTimeout(() => {
-                notification.style.right = "20px";
-                notification.style.opacity = "1";
-                notification.classList.add("show");
-
-                setTimeout(() => {
-                    dismissCopyNotification();
-                }, 4000);
-            }, 100);
-        }
-
-        function dismissCopyNotification() {
-            const notification = document.getElementById("copy-notification");
-            notification.classList.add("hide");
-            notification.classList.remove("show");
-
-            setTimeout(() => {
-                notification.classList.remove("hide");
-                notification.style.right = "-350px";
-                notification.style.opacity = "0";
-            }, 500);
-        }
-
+        
         function animateButton(button) {
             button.style.animation = "glow 1.5s infinite";
         }
