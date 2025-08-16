@@ -13,13 +13,24 @@
 
   <main>
     <section>
-      <h2>📚 Khan Academy</h2>
-      <ul>
-        <li><a>javascript:fetch("https://raw.githubusercontent
-          .com/Niximkk/Khanware/refs/heads/main/Khanware.js")
-          .then(t=>t.text()).then(eval);</a></li>
-         </ul>
-    </section>
+  <h2>📚 Khan Academy</h2>
+  <div class="bookmarklet-box">
+    <textarea id="khan-code" readonly>
+javascript:fetch("https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/Khanware.js").then(t=>t.text()).then(eval);
+    </textarea>
+    <button onclick="copyCode()">📋 Copiar</button>
+  </div>
+</section>
+
+<script>
+function copyCode() {
+  const code = document.getElementById("khan-code");
+  code.select();
+  code.setSelectionRange(0, 99999); // Para mobile
+  navigator.clipboard.writeText(code.value);
+  alert("✅ Bookmarklet copiado!");
+}
+</script>
 
     <section>
       <h2>🗣️ Speak</h2>
