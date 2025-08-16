@@ -391,7 +391,9 @@ body {
     text-align: left;
   }
   }
-.bookmarklet-box {
+.bookmarklet-box pre {
+  overflow-x: auto;   /* só mostra scroll se passar do limite */
+  white-space: pre-wrap; /* quebra o código se for muito grande */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
