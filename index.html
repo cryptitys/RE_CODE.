@@ -32,12 +32,7 @@
   position: relative;
   z-index: 1;
 }
-.logo {
-  height: 50px;
-  margin-bottom: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,255,255,0.4);
-}
+
 .site-header h1 {
   font-size: 2.4rem;
   background: linear-gradient(90deg, #00ffe1, #2c7dfd, #a06afe);
@@ -65,17 +60,6 @@
             flex-direction: column;
         }
 
-        .stars {
-            background: 
-            url("https://www.transparenttexture.com/patterns/stardust.png") repeat;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            heigth: 100%;
-            z-index: -1;
-        }
-            
         
         /* Container principal */
         .container {
@@ -728,26 +712,6 @@
             height: 24px;
             border-radius: 50%;
             background: #6ab04c;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-
-        .rank-1 .rank-number {
-            background: #f1c40f;
-            color: #000;
-        }
-
-        .rank-2 .rank-number {
-            background: #95a5a6;
-        }
-
-        .rank-3 .rank-number {
-            background: #cd7f32;
-        }/
 
         /* Responsividade */
         @media (max-width: 768px) {
@@ -777,7 +741,8 @@
 }
 
 .logo {
-    width: 150px;              /* Reduz o tamanho da logo */
+    max-width: 180px; 
+    height: auto;/* Reduz o tamanho da logo */
     border: 3px solid #00f0ff; /* Borda colorida */
     border-radius: 20px;       /* Bordas arredondadas */
     padding: 10px;             /* Espaço entre logo e borda */
