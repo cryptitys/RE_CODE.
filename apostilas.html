@@ -280,7 +280,7 @@
                 <label for="grade-select">Série:</label>
                 <select id="grade-select">
                     <option value="all">Todas as Séries</option>
-                    <option value="9ano">9º Ano X </option>
+                  <!--  <option value="9ano">9º Ano X </option> -->
                     <option value="1medio">1º Ano EM</option>
                     <option value="2medio">2º Ano EM</option>
                     <option value="3medio">3º Ano EM</option>
@@ -290,8 +290,8 @@
                 <label for="volume-select">Volume:</label>
                 <select id="volume-select">
                     <option value="all">Todos os Volumes</option>
-                    <option value="volume1">Volume 1</option>
-                    <option value="volume2">Volume 2</option>
+                  <!--  <option value="volume1">Volume 1</option>
+                    <option value="volume2">Volume 2</option> -->
                     <option value="volume3">Volume 3</option>
                     <option value="volume4">Volume 4</option>
                 </select>
@@ -306,76 +306,8 @@
     <script>
         // Dados das apostilas
         const apostilasData = {
-            "9ano": {
-                "title": "9º Ano",
-                "totalApostilas": 12,
-                "volumes": {
-                    "volume1": {
-                        "title": "Volume 1",
-                        "books": [
-                            {
-                                "title": "Matemática - Volume 1",
-                                "url": "https://exemplo.com/matematica-9ano-v1.pdf"
-                            },
-                            {
-                                "title": "Língua Portuguesa - Volume 1",
-                                "url": "https://exemplo.com/portugues-9ano-v1.pdf"
-                            },
-                            {
-                                "title": "Ciências - Volume 1",
-                                "url": "https://exemplo.com/ciencias-9ano-v1.pdf"
-                            },
-                            {
-                                "title": "História - Volume 1",
-                                "url": "https://exemplo.com/historia-9ano-v1.pdf"
-                            }
-                        ]
-                    },
-                    "volume2": {
-                        "title": "Volume 2",
-                        "books": [
-                            {
-                                "title": "Matemática - Volume 2",
-                                "url": "https://exemplo.com/matematica-9ano-v2.pdf"
-                            },
-                            {
-                                "title": "Língua Portuguesa - Volume 2",
-                                "url": "https://exemplo.com/portugues-9ano-v2.pdf"
-                            },
-                            {
-                                "title": "Geografia - Volume 2",
-                                "url": "https://exemplo.com/geografia-9ano-v2.pdf"
-                            },
-                            {
-                                "title": "Física - Volume 2",
-                                "url": "https://exemplo.com/fisica-9ano-v2.pdf"
-                            }
-                        ]
-                    },
-                    "volume3": {
-                        "title": "Volume 3",
-                        "books": [
-                            {
-                                "title": "Matemática - Volume 3",
-                                "url": "https://exemplo.com/matematica-9ano-v3.pdf"
-                            },
-                            {
-                                "title": "Língua Portuguesa - Volume 3",
-                                "url": "https://exemplo.com/portugues-9ano-v3.pdf"
-                            },
-                            {
-                                "title": "Química - Volume 3",
-                                "url": "https://exemplo.com/quimica-9ano-v3.pdf"
-                            },
-                            {
-                                "title": "Biologia - Volume 3",
-                                "url": "https://exemplo.com/biologia-9ano-v3.pdf"
-                            }
-                        ]
-                    }
-                }
-            },
-            "1medio": {
+       
+            "1medio": { 
                 "title": "1º Ano Ensino Médio",
                 "totalApostilas": 16,
                 "volumes": {
@@ -443,21 +375,18 @@
                         "title": "Volume 4",
                         "books": [
                             {
-                                "title": "Matemática - Volume 4",
+                                "title": "Língua Portuguesa e Matemática- Volume 4",
                                 "url": "https://exemplo.com/matematica-1medio-v4.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 4",
+                                "title": "História e Geografia- Volume 4",
                                 "url": "https://exemplo.com/portugues-1medio-v4.pdf"
                             },
                             {
-                                "title": "Filosofia - Volume 4",
+                                "title": "Química, Física, Biologia- Volume 4",
                                 "url": "https://exemplo.com/filosofia-1medio-v4.pdf"
                             },
-                            {
-                                "title": "Artes - Volume 4",
-                                "url": "https://exemplo.com/artes-1medio-v4.pdf"
-                            }
+                            
                         ]
                     }
                 }
@@ -470,63 +399,53 @@
                         "title": "Volume 1",
                         "books": [
                             {
-                                "title": "Matemática - Volume 1",
+                                "title": "Língua Portuguesa e Matemática- Volume 1",
                                 "url": "https://exemplo.com/matematica-2medio-v1.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 1",
+                                "title": "História e Geografia- Volume 1",
                                 "url": "https://exemplo.com/portugues-2medio-v1.pdf"
                             },
                             {
-                                "title": "Física - Volume 1",
+                                "title": "Física,  Química e Biologia- Volume 1",
                                 "url": "https://exemplo.com/fisica-2medio-v1.pdf"
                             },
-                            {
-                                "title": "Química - Volume 1",
-                                "url": "https://exemplo.com/quimica-2medio-v1.pdf"
-                            }
+                            
                         ]
                     },
                     "volume2": {
                         "title": "Volume 2",
                         "books": [
                             {
-                                "title": "Matemática - Volume 2",
+                                "title": " Língua Portuguesa  e Matemática - Volume 2",
                                 "url": "https://exemplo.com/matematica-2medio-v2.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 2",
+                                "title": "História e Geografia- Volume 2",
                                 "url": "https://exemplo.com/portugues-2medio-v2.pdf"
                             },
                             {
-                                "title": "Biologia - Volume 2",
+                                "title": "Física, química e Biologia- Volume 2",
                                 "url": "https://exemplo.com/biologia-2medio-v2.pdf"
-                            },
-                            {
-                                "title": "História - Volume 2",
-                                "url": "https://exemplo.com/historia-2medio-v2.pdf"
-                            }
+                            
                         ]
                     },
                     "volume3": {
                         "title": "Volume 3",
                         "books": [
                             {
-                                "title": "Matemática - Volume 3",
-                                "url": "https://exemplo.com/matematica-2medio-v3.pdf"
+                                "title": " Língua Portuguesa e Matemática - Volume 3",
+                                "url": "https://acervocmsp.educacao.sp.gov.br/138013/1262487.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 3",
-                                "url": "https://exemplo.com/portugues-2medio-v3.pdf"
+                                "title": "Fisica, Química e Biologia Volume 3",
+                                "url": "https://acervocmsp.educacao.sp.gov.br/138040/1262595.pdf"
                             },
                             {
-                                "title": "Geografia - Volume 3",
-                                "url": "https://exemplo.com/geografia-2medio-v3.pdf"
+                                "title": "Historia e Geografia - Volume 3",
+                                "url": "https://acervocmsp.educacao.sp.gov.br/138013/1262487.pdf"
                             },
-                            {
-                                "title": "Sociologia - Volume 3",
-                                "url": "https://exemplo.com/sociologia-2medio-v3.pdf"
-                            }
+                            
                         ]
                     },
                     "volume4": {
@@ -602,42 +521,28 @@
                         "title": "Volume 3",
                         "books": [
                             {
-                                "title": "Matemática - Volume 3",
-                                "url": "https://exemplo.com/matematica-3medio-v3.pdf"
+                                "title": "História e Física- Volume 3",
+                                "url": "https://acervocmsp.educacao.sp.gov.br/138042/1262617.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 3",
-                                "url": "https://exemplo.com/portugues-3medio-v3.pdf"
+                                "title": "matematica e Língua Portuguesa - Volume 3",
+                                "url": "https://acervocmsp.educacao.sp.gov.br/138016/1262492.pdf"
                             },
-                            {
-                                "title": "Geografia - Volume 3",
-                                "url": "https://exemplo.com/geografia-3medio-v3.pdf"
-                            },
-                            {
-                                "title": "Sociologia - Volume 3",
-                                "url": "https://exemplo.com/sociologia-3medio-v3.pdf"
-                            }
+                            
                         ]
                     },
                     "volume4": {
                         "title": "Volume 4",
                         "books": [
                             {
-                                "title": "Matemática - Volume 4",
+                                "title": "Lingua Portuguesa e Matemática - Volume 4",
                                 "url": "https://exemplo.com/matematica-3medio-v4.pdf"
                             },
                             {
-                                "title": "Língua Portuguesa - Volume 4",
+                                "title": "História e Física Volume 4",
                                 "url": "https://exemplo.com/portugues-3medio-v4.pdf"
                             },
-                            {
-                                "title": "Filosofia - Volume 4",
-                                "url": "https://exemplo.com/filosofia-3medio-v4.pdf"
-                            },
-                            {
-                                "title": "Artes - Volume 4",
-                                "url": "https://exemplo.com/artes-3medio-v4.pdf"
-                            }
+                          
                         ]
                     }
                 }
