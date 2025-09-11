@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TROLLCHIPS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" href="logo-trollchips.png" type="image/png">
+  <style>
+    /* Reset */
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif;}
+
+    body[data-theme="dark"] {
+      background:#0a0a0a;
+      color:#fff;
+    }
+
+    /* Navbar fixa */
+    .navbar {
+      position: fixed;
+      top:0; left:0; right:0;
+      height:60px;
+      background:#111;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 20px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.4);
+      z-index:1000;
+    }
+
+    .nav-left {display:flex; align-items:center; gap:15px;}
+    .logo {
+      display:flex; align-items:center; gap:8px;
+      font-weight:700; font-size:1.1rem; color:#fff; text-decoration:none;
+    }
+    .logo img {
+      width:34px; height:34px; border-radius:8px; object-fit:contain;
+      border:2px solid #00f0ff; box-shadow:0 0 10px #00f0ff66;
+    }
+
+    .theme-toggle {
+      background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;
+      transition:0.3s;
+    }
+    .theme-toggle:hover {color:#00f0ff;}
+
+    /* Sidebar */
+    .sidebar {
+      position:fixed; top:60px; left:0;
+      width:220px; height:100%;
+      background:#151515;
+      padding:20px 10px;
+      transform:translateX(-100%);
+      transition:transform 0.3s ease;
+      z-index:900;
+    }
+    .sidebar.active {transform:translateX(0);}
+    .sidebar-header {margin-bottom:20px; text-align:center; color:#bbb;}
+    .sidebar-menu {list-style:none;}
+    .sidebar-item {margin-bottom:15px;}
+    .sidebar-link {
+      display:flex; align-items:center; gap:10px;
+      color:#ddd; text-decoration:none; padding:8px 12px;
+      border-radius:8px; transition:0.3s;
+    }
+    .sidebar-link:hover {background:#222; color:#00f0ff;}
+
+    /* Conteúdo principal */
+    .main-content {
+      margin-top:70px;
+      padding:20px;
+      margin-left:0;
+      transition:margin-left 0.3s;
+    }
+    .with-sidebar {margin-left:240px;}
+
+    /* Cards categorias */
+    .category-box {
+      background:rgba(30,30,30,0.7);
+      border-radius:16px;
+      padding:20px;
+      margin-bottom:30px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.4);
+      backdrop-filter:blur(8px);
+    }
+    .category-title {
+      font-size:1.4rem; color:#00eaff; margin-bottom:15px;
+      display:flex; align-items:center; gap:10px; justify-content:center;
+    }
+
+    .buttons-container {
+      display:flex; flex-wrap:wrap; gap:15px; justify-content:center;
+    }
+    .button {
+      flex:1 1 200px; max-width:260px;
+      height:55px; display:flex; align-items:center; justify-content:center; gap:8px;
+      font-weight:600; color:#fff; text-decoration:none;
+      background:linear-gradient(135deg,#1f1f1f,#2c2c2c);
+      border-radius:12px; transition:0.3s; position:relative; overflow:hidden;
+    }
+    .button:before {
+      content:""; position:absolute; top:0; left:-100%; width:100%; height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
+      transition:0.5s;
+    }
+    .button:hover:before {left:100%;}
+    .button:hover {transform:translateY(-3px); background:linear-gradient(135deg,#303030,#444);}
+
+    /* Footer */
+    footer {
+      text-align:center; padding:20px; color:#888; margin-top:40px; font-size:0.9rem;
+    }
+
+    /* Responsivo */
+    @media(max-width:768px){
+      .with-sidebar {margin-left:0;}
+      .sidebar {width:200px;}
+      .button {flex:1 1 100%;}
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button id="sidebarToggle" class="theme-toggle"><i class="fas fa-bars"></i></button>
+      <a href="#" class="logo">
+        <img src="logo-trollchips.png" alt="Logo Trollchips">
+        <span>TROLLCHIPS</span>
+      </a>
+    </div>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-book"></i> Menu
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="#scripts" class="sidebar-link"><i class="fas fa-code"></i> Scripts</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="https://trollchipss.netlify.app" class="sidebar-link"><i class="fas fa-arrow-left"></i> Voltar</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main id="mainContent" class="main-content">
+    <section id="scripts" class="category-box">
+      <h2 class="category-title"><i class="fas fa-code"></i> Scripts</h2>
+      <div class="buttons-container">
+        <a href="https://taskitos.cupiditys.lol" class="button"><i class="fas fa-tasks"></i> TarefaSP</a>
+        <a href="https://redacao.cupiditys.lol/" class="button"><i class="fas fa-pen-to-square"></i> Redação Paulista</a>
+        <a href="https://crimsonstrauss.xyz/expansao" class="button"><i class="fas fa-moon"></i> Expansão Noturno</a>
+        <a href="https://speakify.cupiditys.lol/install" class="button"><i class="fas fa-comments"></i> Speak</a>
+        <a href="https://matific.cupiditys.lol/dashboard" class="button"><i class="fas fa-calculator"></i> Matific</a>
+        <a href="https://leiasp.cupiditys.lol/" class="button"><i class="fas fa-book"></i> LeiaSP</a>
+        <a href="https://crimsonstrauss.xyz/alura" class="button"><i class="fas fa-laptop"></i> Alura</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 TROLLCHIPS - Todos os direitos reservados</footer>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const mainContent = document.getElementById("mainContent");
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      mainContent.classList.toggle("with-sidebar");
+    });
+
+    themeToggle.addEventListener("click", () => {
+      if (body.getAttribute("data-theme") === "dark") {
+        body.setAttribute("data-theme", "light");
+      } else {
+        body.setAttribute("data-theme", "dark");
+      }
+    });
+  </script>
+</body>
+  </html>
