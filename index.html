@@ -164,7 +164,8 @@
         <a href="https://leiasp.cupiditys.lol/" class="button"><i class="fas fa-book"></i> LeiaSP</a>
         <a href="https://crimsonstrauss.xyz/alura" class="button"><i class="fas fa-laptop"></i> Alura</a>
         <a href="https://apostilastrollchipss.netlify.app/" class="button"><i class="fas fa-book-open"></i> Apostilas</a>
-  
+        <a <button class="button" onclick="copyBookmarklet()">  <i class="fas fa-graduation-cap"></i> Khan Academy</button>
+          
       </div>
     </section>
   </main>
@@ -182,7 +183,17 @@
       sidebar.classList.toggle("active");
       mainContent.classList.toggle("with-sidebar");
     });
+    
+    function copyBookmarklet() {
+  const script = `javascript:fetch("https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/Khanware.js").then(t=>t.text()).then(eval);`; 
+  // 🔴 Aqui você coloca o código real do bookmarklet
+  navigator.clipboard.writeText(script).then(() => {
+    alert("✅ Script copiado! Agora cole na barra de favoritos.");
+  });
+    } 
 
+
+    
     themeToggle.addEventListener("click", () => {
       if (body.getAttribute("data-theme") === "dark") {
         body.setAttribute("data-theme", "light");
