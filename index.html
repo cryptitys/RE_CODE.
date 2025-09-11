@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TROLLCHIPS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Logo + título */
+    .logo {
+      width: 140px;
+      margin: 30px auto 10px;
+      display: block;
+      border-radius: 20px;
+      padding: 10px;
+      background: #000;
+      border: 2px solid #00f0ff;
+      box-shadow: 0 0 20px #00f0ff66;
+      animation: pulse 2.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 20px #00f0ff66; }
+      50% { box-shadow: 0 0 35px #00f0ffaa; }
+    }
+
+    .typing-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #00ffe1, #2c7dfd, #a06afe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    /* Container categorias */
+    .category-box {
+      background: rgba(20, 20, 20, 0.6);
+      border-radius: 18px;
+      padding: 25px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s;
+    }
+    .category-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .category-title {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #00eaff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    /* Botões */
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .button {
+      flex: 1 1 220px;
+      max-width: 280px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .button:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    .button:hover:before { left: 100%; }
+    .button:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #303030, #444);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+
+    /* Rodapé */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .typing-title { font-size: 1.8rem; }
+      .button { flex: 1 1 100%; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <img src="logo-trollchips.png" alt="Logo Trollchips" class="logo" />
+  <h1 class="typing-title" id="title"></h1>
+  <div class="description">Utilize todos scripts, automação e apostilas de forma gratuita...</div>
+
+  <!-- Box Scripts -->
+  <div class="category-box">
+    <h2 class="category-title"><i class="fas fa-code"></i> Scripts</h2>
+    <div class="buttons-container">
+      <a href="https://taskitos.cupiditys.lol" class="button"><i class="fas fa-tasks"></i> TarefaSP</a>
+      <a href="https://redacao.cupiditys.lol/" class="button"><i class="fas fa-pen-to-square"></i> Redação Paulista</a>
+      <a href="https://crimsonstrauss.xyz/expansao" class="button"><i class="fas fa-moon"></i> Expansão Noturno</a>
+      <a href="https://speakify.cupiditys.lol/install" class="button"><i class="fas fa-comments"></i> Speak</a>
+      <a href="https://matific.cupiditys.lol/dashboard" class="button"><i class="fas fa-calculator"></i> Matific</a>
+      <a href="https://leiasp.cupiditys.lol/" class="button"><i class="fas fa-book"></i> LeiaSP</a>
+      <a href="https://crimsonstrauss.xyz/alura" class="button"><i class="fas fa-laptop"></i> Alura</a>
+    </div>
+  </div>
+
+  <footer>© 2025 TROLLCHIPS - Todos os direitos reservados</footer>
+
+  <script>
+    const titleText = "TROLLCHIPS";
+    const titleElement = document.getElementById("title");
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingDelay = 120;
+    let deletingDelay = 50;
+    let newTextDelay = 2500;
+
+    function typeTitle() {
+      if (!isDeleting && charIndex < titleText.length) {
+        titleElement.textContent = titleText.substring(0, charIndex + 1);
+        charIndex++;
+        setTimeout(typeTitle, typingDelay);
+      } else if (isDeleting && charIndex > 0) {
+        titleElement.textContent = titleText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeTitle, deletingDelay);
+      } else if (charIndex === titleText.length) {
+        isDeleting = true;
+        setTimeout(typeTitle, newTextDelay);
+      } else if (charIndex === 0) {
+        isDeleting = false;
+        setTimeout(typeTitle, typingDelay);
+      }
+    }
+    typeTitle();
+  </script>
+</body>
+  </html>
