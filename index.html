@@ -66,7 +66,136 @@
       border-radius:8px; transition:0.3s;
     }
     .sidebar-link:hover {background:#222; color:#00f0ff;}
+       /* HERO ------------------------------------------------------------------ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
 
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* agora a imagem aparece 100% */
+    z-index: -2;
+}
+
+/* GRADIENTE COMO NA IMAGEM */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+    z-index: -1;
+}
+
+/* CONTEÚDO --------------------------------------------------------------- */
+.hero-content {
+    text-align: center;
+    max-width: 600px;
+    animation: fadeUp 1s ease forwards;
+}
+
+/* BADGE SEM COBRIR A IMAGEM --------------------------------------------- */
+.badge {
+    background: rgba(65, 53, 133, 0.18); /* bem mais leve, não cobre a imagem */
+    padding: 10px 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999px;
+    backdrop-filter: none; /* remove qualquer blur */
+    margin-bottom: 25px;
+    animation: pop 1.2s ease;
+}
+
+.badge .icon {
+    width: 20px;
+    filter: brightness(1.5);
+}
+
+.badge span {
+    color: #b9a9ff;
+    font-size: 16px;
+}
+
+/* TÍTULO IGUAL AO MODELO ------------------------------------------------ */
+.title {
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #846dff;
+}
+
+/* SUBTÍTULO ------------------------------------------------------------- */
+.subtitle {
+    color: #b3b3cc;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+/* BOTÕES ---------------------------------------------------------------- */
+.btn {
+    display: block;
+    width: 90%;
+    max-width: 430px;
+    margin: 15px auto;
+    padding: 18px 0;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+/* Botão roxo igual ao da imagem */
+.primary {
+    background: linear-gradient(90deg, #8f73ff, #715cff);
+    color: #fff;
+}
+
+.primary:hover {
+    transform: scale(1.03);
+}
+
+/* Botão secundário */
+.secondary {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #8f7eff;
+}
+
+.secondary:hover {
+    transform: scale(1.03);
+}
+
+/* ANIMAÇÕES -------------------------------------------------------------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { opacity: 0; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1); }
+    }
+    
     /* Conteúdo principal */
     .main-content {
       margin-top:70px;
@@ -295,7 +424,31 @@
       </li>
     </ul>
   </aside>
+<section class="hero">
+    <img src="imgs/4dc855887e47d1c638f5e6b412ec5f53.jpg" alt="Fundo quadriculado" class="hero-bg">
 
+    <div class="hero-content">
+
+        <!-- BADGE IGUAL AO MODELO -->
+        <div class="badge">
+          <!--  <img src="20251209_005808.png" class="icon"> -->
+            <span>Scripts 2026</span>
+        </div>
+
+        <!-- TÍTULO IDÊNTICO -->
+        <h1 class="title">
+            Comunidade <br> Trollchips .<span class="highlight">🤖. </span>
+        </h1>
+
+        <!-- SUBTÍTULO IDÊNTICO -->
+        <p class="subtitle">
+            Scripts,  apostilas e tutoriais!
+        </p>
+
+        
+
+          </div>
+</section>
   <!-- Conteúdo -->
   <section id="status" class="status-section">
     <h2 class="status-title">Scripts e Status</h2>
